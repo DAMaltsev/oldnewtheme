@@ -1,0 +1,138 @@
+
+      <h3 class="cych3">Use our "Year/Make/Model" search below to return instructions related to your specific vehicle. </h3>
+               <style>
+                 .cych1{
+                   font-size:25px;
+                 }
+                 .cych3{
+                   font-size:18px;
+                 }
+                 .cycClear {
+                  clear: both;
+                    display: block !important;
+                  }
+                 .cycSearchHeaderSec {
+                      width: 100%;
+                      background-color: #231f20;
+                      border: #989697 solid 1px;
+                      box-sizing: border-box;
+                      display: block;
+                      margin-top: 14px;
+                 }
+                 .cycSearchHeaderSec{
+                      margin-top:0px;	
+                 }
+                 .cycSearchHeaderSec .cycshcontainer {
+                      padding-left: 10px;
+                      padding-right: 10px;
+                 }
+                 .cycSearchHeaderSec .cycshcontainer .text {
+                      font-family: "DM Sans", sans-serif;
+                      color: #141011;
+                      font-size: 1.4em;
+                      border-top: solid #e2e3e2 1px;
+                      border-bottom: solid #e2e3e2 1px;
+                      border-left: solid #e2e3e2 1px;
+                      border-right: solid #ea4f56 1px;
+                      float: left;
+                      background-color: #fff;
+                      width: 41px;
+                      height: 34px;
+                      text-align: center;
+                      box-sizing: border-box;
+                      line-height: 35px;
+                 }
+                 .cycSearchHeaderSec .cycshcontainer .space {
+                      margin-left: 22px;
+                 }
+                 .cycSearchHeaderSec .cycshcontainer .cycsearchbutton {
+                      float: none;
+                      font-family: "DM Sans", sans-serif;
+                      color: #fff;
+                      font-size: 1.4em;
+                      line-height: 34px;
+                      width: 100%;
+                      height: 34px;
+                      background-color: #359CC3;
+                      border: solid #359CC3 1px;
+                      box-sizing: border-box;
+                      text-align: center;
+                      cursor: pointer;
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+                 }
+                 .cycSearchHeaderSec .text {
+                      color: #fff;
+                      font-family: "DM Sans", sans-serif;
+                      font-size: 1.6em;
+                      text-align: center;
+                      margin-top: 10px;
+                 }
+                 .cycSearchHeaderSec .texthead {
+                      color: #fff;
+                      font-family: "DM Sans", sans-serif;
+                      font-size: 1.6em;
+                      text-align: center;
+                      margin-top: 4px;
+                 }
+                 .cycSearchHeaderSec .cycsearchmain {
+                      margin-top: 10px;
+                      width: calc(100% - 41px);
+                 }
+                 .cycSearchHeaderSec .cycsearchmain select {
+                      width: 100%;
+                 }
+               .cycsearchmain select {
+                  width: 100%;
+                  height: 34px;
+                  border-top: solid #e2e3e2 1px;
+                  border-bottom: solid #e2e3e2 1px;
+                  border-right: solid #e2e3e2 1px;
+                  border-left: none;
+                  font-family: "DM Sans", sans-serif;
+                  font-size: 1em;
+                  color: #141011;
+                  -webkit-border-radius: 0;
+                  border-radius: 0;
+                  padding-left: 4px;
+                  outline: 0;
+                  }
+                 .cycsearchmain {
+                    float: left;
+                   margin-top: 10px;
+                    width: calc(100% - 41px);
+                  }
+   
+        
+
+            </style>
+              <div class="cycSearchHeaderSec" style="">
+                <div class="texthead">SELECT YOUR VEHICLE</div>
+                <div class="cycshcontainer">
+                  <div class="text">1</div>
+                  <div class="cycsearchboxes cycsearchmain">
+                  <select class="cycsearchyear cycsearchyearm" name="auto year" onChange="cycchooseyear(this.value);" style="">
+                    <option>Select Year</option>
+                  </select>
+                </div>
+                <div class="cycClear"></div>
+                <div class="text">2</div>
+                <div class="cycsearchboxes cycsearchmain">
+                <select class="cycsearchmake cycsearchmakem" name="auto make" onChange="cycchoosemake(this.value);" style="">
+                <option>Select Make</option>
+                </select>
+                </div>
+                <div class="cycClear"></div>
+                <div class="text">3</div>
+                <div class="cycsearchboxes cycsearchmain">
+                <select class="cycsearchmodel cycsearchmodelm" name="auto model" onChange="cycchoosemodelsearch(this.value);" style="">
+                <option>Select Model</option>
+                </select>
+                </div>
+                <div class="cycClear"></div>
+                <div class="cycsearchmsgm"></div>
+                <div class="cycsearchbutton" onClick="cycdropsearchfindM();">FIND</div>
+                </div>
+                </div>
+      <div id="cycsearchresults"></div>
+   

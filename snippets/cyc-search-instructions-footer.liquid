@@ -1,0 +1,39 @@
+<script type="text/javascript" defer="">  
+       $( document ).ready(function() {  
+          cycdropdownint();
+        });  
+     </script>
+
+      <script>
+      function cycgesearch() {
+
+          var scriptUrl = 'https://carandtruckremotes.practicaldatacore.com/cyc/searchk2g/search-ins-spv2.php?searchyear=' + cycsearchyear + '&searchmake=' + cycsearchmake + '&searchmodel=' + encodeURIComponent(cycsearchmodel);
+        console.log(scriptUrl);
+        var result = null;
+        jQuery.ajax({
+            async: false,
+        	type: "GET",
+        	crossDomain: true,
+        	url: scriptUrl,
+           success : function(text)
+            {
+               result = text;
+            }
+          });
+
+        return result;
+      }
+
+
+    const cycmyHeaders = window.location.search;
+    const cycurlParams = new URLSearchParams(cycmyHeaders);
+    const cycsearchyear = cycurlParams.get('searchyear');
+    const cycsearchmake = cycurlParams.get('searchmake');
+    const cycsearchmodel = cycurlParams.get('searchmodel');
+
+    if(cycsearchyear != null && cycsearchmake != null && cycsearchmodel != null){
+      console.log("CYC Search fired: " + cycsearchyear);
+      $("#cycsearchresults").html(cycgesearch());
+    }
+      
+    </script>
